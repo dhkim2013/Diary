@@ -13,6 +13,7 @@ class DiaryListViewController: UIViewController, UITableViewDataSource, UITableV
     var diarys: [Diary] = []
     
     let tableView = UITableView()
+    let postButtonItem = UIBarButtonItem(title: "글쓰기", style: .plain, target: nil, action: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,11 @@ class DiaryListViewController: UIViewController, UITableViewDataSource, UITableV
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+        self.postButtonItem.target = self
+        self.postButtonItem.action = #selector(postButtonItemDidSelected)
+        
+        self.navigationItem.rightBarButtonItem = self.postButtonItem
+        
         self.title = "Diary"
     }
     
@@ -35,8 +41,20 @@ class DiaryListViewController: UIViewController, UITableViewDataSource, UITableV
         self.tableView.frame = self.view.bounds
     }
     
-    func loadDiarys() {
+    func postButtonItemDidSelected() {
+        let addPostViewController = AddPostViewController()
+        let navigationController = UINavigationController(rootViewController: addPostViewController)
         
+        self.present(navigationController, animated: true, completion: nil)
+    }
+    
+    func loadDiarys() {
+        guard let dicts = UserDefaults.standard.array(forKey: "diarys") as? [[String: Any]] else { return }
+        
+        print(dicts.flatMap { dict -> Diary? in
+            return Diary(dictionary: dict)
+        })
+        self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -16,6 +16,7 @@
 		8075AE651E1B614700E3DCC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8075AE631E1B614700E3DCC3 /* LaunchScreen.storyboard */; };
 		8075AE701E1B614700E3DCC3 /* DiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075AE6F1E1B614700E3DCC3 /* DiaryTests.swift */; };
 		8075AE7B1E1B614700E3DCC3 /* DiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8075AE7A1E1B614700E3DCC3 /* DiaryUITests.swift */; };
+		807AA68F1E1CD1D00051635C /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807AA68E1E1CD1D00051635C /* AddPostViewController.swift */; };
 		E2B3A37181742B9D9D86CC7B /* Pods_DiaryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A24F68A5FA36717C7FE30B /* Pods_DiaryTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		8075AE761E1B614700E3DCC3 /* DiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8075AE7A1E1B614700E3DCC3 /* DiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryUITests.swift; sourceTree = "<group>"; };
 		8075AE7C1E1B614700E3DCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807AA68E1E1CD1D00051635C /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		92D2D7701F89162C28B6217E /* Pods-Diary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Diary/Pods-Diary.debug.xcconfig"; sourceTree = "<group>"; };
 		A3514DC936B77178F2DCCC24 /* Pods-Diary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diary.release.xcconfig"; path = "Pods/Target Support Files/Pods-Diary/Pods-Diary.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 			children = (
 				8075AE5A1E1B614700E3DCC3 /* AppDelegate.swift */,
 				8075AE5C1E1B614700E3DCC3 /* DiaryListViewController.swift */,
+				807AA68E1E1CD1D00051635C /* AddPostViewController.swift */,
 				804114051E1CAF35005A10A5 /* Diary.swift */,
 				8075AE611E1B614700E3DCC3 /* Assets.xcassets */,
 				8075AE631E1B614700E3DCC3 /* LaunchScreen.storyboard */,
@@ -445,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807AA68F1E1CD1D00051635C /* AddPostViewController.swift in Sources */,
 				8075AE5D1E1B614700E3DCC3 /* DiaryListViewController.swift in Sources */,
 				8075AE5B1E1B614700E3DCC3 /* AppDelegate.swift in Sources */,
 				804114061E1CAF35005A10A5 /* Diary.swift in Sources */,
