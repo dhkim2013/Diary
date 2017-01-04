@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiaryListViewController: UIViewController, UITableView {
+class DiaryListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,5 @@ class DiaryListViewController: UIViewController, UITableView {
         // Dispose of any resources that can be recreated.
     }
     
-    
-
 }
 
