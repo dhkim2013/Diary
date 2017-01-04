@@ -48,6 +48,19 @@ class DiaryListViewController: UIViewController, UITableViewDataSource, UITableV
         self.present(navigationController, animated: true, completion: nil)
     }
     
+    func saveDiarys() {
+        let dicts = self.diarys.map { diary -> [String: Any] in
+            return [
+                "date": diary.date,
+                "title": diary.title,
+                "content": diary.content,
+            ]
+        }
+        
+        UserDefaults.standard.set(dicts, forKey: "diarys")
+        UserDefaults.standard.synchronize()
+    }
+    
     func loadDiarys() {
         guard let dicts = UserDefaults.standard.array(forKey: "diarys") as? [[String: Any]] else { return }
         
